@@ -1,0 +1,45 @@
+.pagination {
+  display: flex
+;
+    align-items: end;
+    height: 60svh;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.pageBtn,
+.pageNumber {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.pageBtn {
+  font-size: 1.2rem;
+}
+
+.pageBtn[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageNumber {
+  min-width: 1.5rem;
+}
+
+.activePage {
+  border-bottom: 2px solid currentColor;
+  font-weight: 600;
+}
+
+.ellipsis {
+  color: gray;
+  pointer-events: none;
+}

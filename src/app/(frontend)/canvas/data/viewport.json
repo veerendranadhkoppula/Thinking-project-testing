@@ -1,0 +1,76 @@
+{
+  "viewports": [
+    {
+      "label": "iPhone SE",
+      "x": 320,
+      "y": 568,
+      "orientation": true
+    },
+    {
+      "label": "iPhone 12 Pro",
+      "x": 390,
+      "y": 844,
+      "orientation": true
+    },
+    {
+      "label": "iPhone 12 Pro Max",
+      "x": 428,
+      "y": 926,
+      "orientation": true
+    },
+    {
+      "label": "iPhone XR",
+      "x": 414,
+      "y": 896,
+      "orientation": true
+    },
+    {
+      "label": "Pixel 7",
+      "x": 412,
+      "y": 771,
+      "orientation": true
+    },
+    {
+      "label": "Samsung Galaxy S20 Ultra",
+      "x": 412,
+      "y": 915,
+      "orientation": true
+    },
+    {
+      "label": "iPad Mini",
+      "x": 768,
+      "y": 1024,
+      "orientation": true
+    },
+    {
+      "label": "iPad Air",
+      "x": 834,
+      "y": 1194,
+      "orientation": true
+    },
+    {
+      "label": "iPad Pro 12.9\"",
+      "x": 1024,
+      "y": 1366,
+      "orientation": true
+    },
+    {
+      "label": "Laptop (13-inch)",
+      "x": 1366,
+      "y": 768,
+      "orientation": false
+    },
+    {
+      "label": "Desktop (Full HD)",
+      "x": 1920,
+      "y": 1080,
+      "orientation": false
+    },
+    {
+      "label": "4K UHD (Desktop)",
+      "x": 2506,
+      "y": 1242,
+      "orientation": false
+    }
+  ]
+}

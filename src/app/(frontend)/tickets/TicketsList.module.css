@@ -1,0 +1,83 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  background: #fff; 
+  color: #222;
+}
+
+.heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111; 
+}
+
+.newButton {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #222;
+  background: #f9fafb;
+  transition: background 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.newButton:hover {
+  background: #f3f4f6;
+}
+
+.list {
+  list-style: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  padding: 1rem;
+  transition: background 0.2s ease;
+}
+
+.listItem + .listItem {
+  border-top: 1px solid #e5e7eb;
+}
+
+.listItem:hover {
+  background: #fafafa;
+}
+
+.link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.itemHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+  color: #111;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #444; 
+  margin-top: 0.2rem;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: #555;
+}

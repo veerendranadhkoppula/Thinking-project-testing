@@ -1,0 +1,125 @@
+.container {
+  padding: 1.5rem;
+  background: #fff;
+  color: #222;
+  font-family: Arial, sans-serif;
+}
+
+.ticketBox {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #fafafa;
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.3rem;
+}
+
+.url {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.urlLink {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.description {
+  margin-top: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.commentForm {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.textarea {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.6rem;
+  font-size: 0.95rem;
+  outline: none;
+  resize: vertical;
+}
+
+.textarea:focus {
+  border-color: #2563eb;
+}
+
+.button {
+  align-self: flex-start;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: #1e4ed8;
+}
+
+.commentsBox {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.commentsHeader {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: #f9fafb;
+}
+
+.commentList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.commentItem {
+  padding: 0.75rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.commentItem:first-child {
+  border-top: none;
+}
+
+.commentMeta {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.commentBody {
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+  color: #222;
+}
