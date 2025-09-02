@@ -139,6 +139,9 @@ export default function Navbar({ user }: { user: User | null }) {
                     <Link href="/profile" className={styles.dropdownItem}>
                       Profile
                     </Link>
+                    <Link href="/tickets" className={styles.dropdownItem}>
+                      Open Tickets
+                    </Link>
                     <Link href="/billing" className={styles.dropdownItem}>
                       Billing
                     </Link>

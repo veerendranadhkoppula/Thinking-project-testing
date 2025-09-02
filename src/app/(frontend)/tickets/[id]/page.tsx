@@ -3,6 +3,7 @@ import { headers } from 'next/headers'
 import { getServerOrigin } from '@/lib/http'
 import { requireAuth } from '@/lib/requireAuth'
 import styles from './TicketDetail.module.css'
+import Link from 'next/link' // 👈 added
 
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
@@ -27,7 +28,7 @@ async function getComments(id: string) {
   const cookie = (await headers()).get('cookie') || ''
   const res = await fetch(
     `${origin}/api/comments?where[ticket][equals]=${encodeURIComponent(id)}&depth=1&sort=createdAt`,
-    { cache: 'no-store', credentials: 'include', headers: { cookie } }
+    { cache: 'no-store', credentials: 'include', headers: { cookie } },
   )
   if (!res.ok) return { docs: [] }
   return res.json()
@@ -76,6 +77,12 @@ export default async function TicketDetail({ params }: { params: Promise<{ id: s
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className={styles.backBtnWrapper}>
+        <Link href="/tickets" className={styles.backBtn}>
+          ← Back to Tickets
+        </Link>
       </div>
     </div>
   )

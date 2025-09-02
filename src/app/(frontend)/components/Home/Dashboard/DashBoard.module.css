@@ -6,8 +6,9 @@
 .dashboardControls {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .controlBtn {
@@ -25,79 +26,57 @@
   background: #4338ca;
 }
 
-.filterWrapper {
-  position: relative;
-}
 
-.filterDropdown {
-  position: absolute;
-  top: 110%;
-  left: 0;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+.filterChips {
   display: flex;
-  flex-direction: column;
-  min-width: 120px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.filterDropdown button {
-  padding: 8px 12px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  text-align: left;
-  transition: background 0.2s ease;
-}
-
-.filterDropdown button:hover {
+.chip {
   background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
 }
 
-.searchWrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
+.chip:hover {
+  background: #e0e7ff;
+  border-color: #6366f1;
+  color: #111827;
 }
 
-.searchIcon {
+.activeChip {
   background: #4f46e5;
   color: white;
-  border: none;
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  cursor: pointer;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s ease;
+  border-color: #4338ca;
+  font-weight: 500;
 }
 
-.searchIcon:hover {
-  background: #4338ca;
+
+.searchWrapper {
+  flex: 1;
+  max-width: 280px;
 }
 
-.controlSearch {
-  width: 0;
-  opacity: 0;
-  padding: 0;
-  margin-left: 8px;
+.searchInput {
+  width: 100%;
+  padding: 8px 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  outline: none;
   font-size: 14px;
-  transition: width 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  outline: none;
+  transition: border 0.2s ease;
 }
 
-.showSearch {
-  width: 220px;
-  opacity: 1;
-  padding: 8px 12px;
+.searchInput:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
 }
-
 
 .dashboardResults {
   display: grid;
@@ -123,10 +102,6 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.noResults {
-  color: #888;
-  font-size: 14px;
-}
 .dashboardCard h4 {
   color: #111827;
   font-size: 16px;
@@ -138,4 +113,19 @@
   color: #6b7280;
   font-size: 14px;
   margin: 0;
+}
+
+.noResults {
+  color: #888;
+  font-size: 14px;
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  background: #f3f4f6;
+  color: #374151;
 }

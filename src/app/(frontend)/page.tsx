@@ -1,3 +1,5 @@
+// HomePage.tsx
+
 import Navbar from '@/app/(frontend)/components/Home/Navbar/Navbar'
 // import ChatWidget from '@/app/(frontend)/components/Home/Navbar/ChatWidget'
 import DashBoard from '@/app/(frontend)/components/Home/Dashboard/DashBoard'
@@ -42,7 +44,12 @@ export default async function HomePage() {
       const versions = c.value.versions || []
       const latestVersion = versions.length > 0 ? versions.length : 1
       const admins = Array.isArray(c.value.admins) ? c.value.admins : []
+      const editors = Array.isArray(c.value.editors) ? c.value.editors : []
+      const guests = Array.isArray(c.value.guests) ? c.value.guests : []
+
       const isAdmin = admins.some((a: any) => a?.admin === user.email)
+      const isEditor = editors.some((e: any) => e?.editor === user.email)
+      const isGuest = guests.some((g: any) => g?.guest === user.email)
 
       return {
         id: c.value.id,
@@ -54,6 +61,7 @@ export default async function HomePage() {
           ? `/canvas-setting/?id=${c.value.id}&version=${latestVersion}&type=${mediaType}&injection=${injectionType}`
           : null,
         isAdmin,
+        isShared: !isAdmin && (isEditor || isGuest), // 👈 NEW
       }
     })
   }
