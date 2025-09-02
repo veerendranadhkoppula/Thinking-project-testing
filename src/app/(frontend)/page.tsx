@@ -1,6 +1,6 @@
 import Navbar from '@/app/(frontend)/components/Home/Navbar/Navbar'
 // import ChatWidget from '@/app/(frontend)/components/Home/Navbar/ChatWidget'
-import DashBoard from '@/app/(frontend)/components/Home/DashBoard/DashBoard'
+import DashBoard from '@/app/(frontend)/components/Home/Dashboard/DashBoard'
 import { getServerUser } from '@/lib/getServerUser'
 import ClientHomeMounted from './components/Home/ClientHomeMounted'
 
