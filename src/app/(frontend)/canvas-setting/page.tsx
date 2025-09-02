@@ -3,7 +3,6 @@ import payload, { CollectionSlug } from 'payload'
 import Client_CanvasSettings from './Client_CanvasSettings'
 import { getServerUser } from '@/lib/getServerUser'
 import { notFound } from 'next/navigation'
-// import { type PageProps } from 'next' // if you want, but not strictly needed
 export const dynamic = 'force-dynamic'
 
 type AdminRow = { admin: string }
@@ -94,11 +93,11 @@ async function GetCanvasData({
   }
 }
 
-export default async function CanvasSettings({
-  searchParams,
-}: {
+type PageProps = {
   searchParams?: { [k: string]: string | string[] | undefined }
-}) {
+}
+
+export default async function CanvasSettings({ searchParams }: PageProps) {
   const data = await GetCanvasData({ searchParams: searchParams ?? {} })
   return <Client_CanvasSettings data={data} />
 }
